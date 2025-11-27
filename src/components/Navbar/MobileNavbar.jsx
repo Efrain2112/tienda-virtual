@@ -83,7 +83,7 @@ function MobileNavbar({ navbarStyles }) {
         <nav className={`flex justify-between items-center fixed z-10 top-0 w-full py-5 px-4 text-sm font-light ${navbarStyles}`}>
             <div>
                 <NavLink to='/' className='font-semibold text-lg'>
-                    Shopi
+                    tienda virtual
                 </NavLink>
             </div>
             <div className='flex gap-3'>

@@ -88,7 +88,7 @@ const Navbar = () => {
                     <ul className='flex items-center gap-3'>
                         <li className='font-semibold text-lg'>
                             <NavLink to='/' onClick={() => context.setSearchByCategory()}>
-                                Shopi
+                                tienda virtual
                             </NavLink>
                         </li>
                         <li className={linkStyles}>

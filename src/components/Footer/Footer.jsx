@@ -20,12 +20,12 @@ function Footer() {
                     <div>
                         <div className="flex justify-center lg:justify-start">
                             <NavLink to='/' onClick={() => context.setSearchByCategory()} className="text-white font-semibold text-xl">
-                                Shopi
+                                tienda virtual
                             </NavLink>
                         </div>
 
                         <p className="mx-auto mt-6 max-w-md text-center leading-relaxed text-white opacity-80 lg:text-left" >
-                            Welcome to Shopi - your online shopping destination where quality meets convenience!
+                            Welcome to tienda virtual - your online shopping destination where quality meets convenience!
                         </p>
                     </div>
 
