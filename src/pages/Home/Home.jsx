@@ -19,7 +19,7 @@ function Home() {
   const renderNoMatches = () => (
     <div id="top" className="flex flex-col justify-center items-center gap-3">
       <p className="text-center font-medium text-lg">
-        {context.searchByTitle ? "Sorry, No Matches Found.": "Exclusive Products"}
+        {context.searchByTitle ? "Lo sentimos, no se encontraron resultados.": "Productos Exclusivos"}
       </p>
       {context.searchByTitle && (
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-56 h-56 text-neutral-900">
@@ -65,11 +65,11 @@ function Home() {
   return (
     <div className='flex flex-col items-center gap-4'>
       <div className='flex justify-center relative w-80 mb-4'>
-        <h1 className='font-medium text-xl'>Exclusive Products</h1>
+        <h1 className='font-medium text-xl'>Productos Exclusivos</h1>
       </div>
       <input
         type="text"
-        placeholder='Search a product'
+        placeholder='Buscar un producto'
         className=' max-sm:w-60 rounded-lg border border-black w-80 p-3 mb-4 caret-neutral-900'
         onChange={(event) => context.setSearchByTitle(event.target.value)} 
       />

@@ -47,17 +47,17 @@ function MobileNavbar({ navbarStyles }) {
                 <>
                     <li className='rounded-lg px-4 py-2 text-neutral-900 hover:bg-gray-100 hover:text-neutral-700'>
                         <NavLink to='/my-orders' className='text-sm font-medium'>
-                            My Orders
+                            Mis Órdenes
                         </NavLink>
                     </li>
                     <li className='rounded-lg px-4 py-2 text-neutral-900 hover:bg-gray-100 hover:text-neutral-700'>
                         <NavLink to='/my-account' className='text-sm font-medium'>
-                            My Account
+                            Mi Cuenta
                         </NavLink>
                     </li>
                     <li className='rounded-lg px-4 py-2 text-neutral-900 hover:bg-gray-100 hover:text-neutral-700'>
                         <NavLink to='/sign-in' className='text-sm font-medium'>
-                            Sign out
+                            Cerrar Sesión
                         </NavLink>
                     </li>
                 </>
@@ -67,7 +67,7 @@ function MobileNavbar({ navbarStyles }) {
                 <>
                     <li className='rounded-lg px-4 py-2 text-neutral-900 hover:bg-gray-100 hover:text-neutral-700'>
                         <NavLink to='/sign-in' className='text-sm font-medium'>
-                            Sign In / Sign up
+                            Iniciar Sesión / Registrarse
                         </NavLink>
                     </li>
                 </>
@@ -102,7 +102,7 @@ function MobileNavbar({ navbarStyles }) {
                 <li className='ml-2'>
                     <details className="group [&_summary::-webkit-details-marker]:hidden">
                         <summary className="flex cursor-pointer items-center justify-between self-center rounded-lg px-4 py-2 text-neutral-900 hover:bg-gray-100 hover:text-neutral-700">
-                            <span className="text-sm font-medium">Products</span>
+                            <span className="text-sm font-medium">Productos</span>
                             <span className="flex justify-center shrink-0 transition duration-300 group-open:-rotate-180 text-neutral-900 mt-1">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20" strokeWidth={1} stroke="currentColor" className="h-5 w-5">
                                     <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd"/>
@@ -112,27 +112,27 @@ function MobileNavbar({ navbarStyles }) {
                         <ul className='mt-2 space-y-1 px-4 bg-white flex flex-col items-center gap-3 '>
                             <li className='rounded-lg px-4 py-2 text-neutral-900 hover:bg-gray-400 hover:text-neutral-700'>
                                 <NavLink to='/clothes' onClick={() => context.setSearchByCategory('clothes')}>
-                                    Clothes
+                                    Ropa
                                 </NavLink>
                             </li>
                             <li className='rounded-lg px-4 py-2 text-neutral-900 hover:bg-gray-400 hover:text-neutral-700'>
                                 <NavLink to='/shoes' onClick={() => context.setSearchByCategory('shoes')}>
-                                    Shoes
+                                    Zapatos
                                 </NavLink>
                             </li>
                             <li className='rounded-lg px-4 py-2 text-neutral-900 hover:bg-gray-400 hover:text-neutral-700'>
                                 <NavLink to='/electronics' onClick={() => context.setSearchByCategory('electronics')}>
-                                    Electronics
+                                    Electrónicos
                                 </NavLink>
                             </li>
                             <li className='rounded-lg px-4 py-2 text-neutral-900 hover:bg-gray-100 hover:text-neutral-700'>
                                 <NavLink to='/Fornitures' onClick={() => context.setSearchByCategory('fornitures')}>
-                                    Fornitures
+                                    Muebles
                                 </NavLink>
                             </li>
                             <li className='rounded-lg px-4 py-2 text-neutral-900 hover:bg-gray-100 hover:text-neutral-700'>
                                 <NavLink to='/Others' onClick={() => context.setSearchByCategory('others')}>
-                                    Others
+                                    Otros
                                 </NavLink>
                             </li>
                         </ul>

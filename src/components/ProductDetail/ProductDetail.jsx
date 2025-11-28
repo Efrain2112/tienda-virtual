@@ -19,7 +19,7 @@ const ProductDetail = () => {
     return (
         <aside className={`${context.isProductDetailOpen ? 'flex' : 'hidden'} max-sm:w-full max-sm:h-screen max-sm:border-none max-sm:overflow-y-scroll max-sm:no-scrollbar  w-[360px] h-[calc(100vh-68px)] top-[68px] flex flex-col fixed right-0 border border-black rounded-lg bg-white`}>
             <div className='flex justify-between items-center p-6'>
-                <h2 className='font-medium text-xl'>Detail</h2>
+                <h2 className='font-medium text-xl'>Detalle</h2>
                 <div className="bg-gray-400 bg-opacity-30 hover:bg-opacity-20 p-2 rounded-full cursor-pointer" onClick={() => context.closeProductDetail()}>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />

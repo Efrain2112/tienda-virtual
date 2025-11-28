@@ -52,17 +52,17 @@ const Navbar = () => {
                 </li>
                 <li className={linkStyles}>
                     <NavLink to='/my-orders' className={({ isActive }) => isActive ? activeStyle : undefined}>
-                        My Orders
+                        Mis Órdenes
                     </NavLink>
                 </li>
                 <li className={linkStyles}>
                     <NavLink to='/my-account' className={({ isActive }) => isActive ? activeStyle : undefined}>
-                        My Account
+                        Mi Cuenta
                     </NavLink>
                 </li>
                 <li className={linkStyles}>
                     <NavLink to='/sign-in' className={({ isActive }) => isActive ? activeStyle : undefined}>
-                        Log out
+                        Cerrar Sesión
                     </NavLink>
                 </li>
             </>
@@ -71,7 +71,7 @@ const Navbar = () => {
             return (
             <li>
                 <NavLink to="/sign-in" className={`px-2 py-1 hover:opacity-80 transition duration-150 hover:ease-linear text-base font-light ${linkSignInStyle}`} onClick={() => handleSignOut()}>
-                    Sign in
+                    Iniciar Sesión
                 </NavLink>
             </li>
             )
@@ -93,32 +93,32 @@ const Navbar = () => {
                         </li>
                         <li className={linkStyles}>
                             <NavLink to='/' onClick={() => context.setSearchByCategory()} className={({ isActive }) => isActive ? activeStyle : undefined}>
-                                All
+                                Todo
                             </NavLink>
                         </li>
                         <li className={linkStyles}> 
                             <NavLink to='/clothes' onClick={() => context.setSearchByCategory('clothes')} className={({ isActive }) => isActive ? activeStyle : undefined}>
-                                Clothes
+                                Ropa
                             </NavLink>
                         </li>
                         <li className={linkStyles}>
                             <NavLink to='/electronics' onClick={() => context.setSearchByCategory('electronics')} className={({ isActive }) => isActive ? activeStyle : undefined}>
-                                Electronics
+                                Electrónicos
                             </NavLink>
                         </li>
                         <li className={linkStyles}>
                             <NavLink to='/fornitures' onClick={() => context.setSearchByCategory('fornitures')} className={({ isActive }) => isActive ? activeStyle : undefined}>
-                                Fornitures
+                                Muebles
                             </NavLink>
                         </li>
                         <li className={linkStyles}>
                             <NavLink to='/toys' onClick={() => context.setSearchByCategory('toys')} className={({ isActive }) => isActive ? activeStyle : undefined}>
-                                Toys
+                                Juguetes
                             </NavLink>
                         </li>
                         <li className={linkStyles}>
                             <NavLink to='/others' onClick={() => context.setSearchByCategory('others')} className={({ isActive }) => isActive ? activeStyle : undefined}>
-                                Others
+                                Otros
                             </NavLink>
                         </li>
                     </ul>

@@ -45,7 +45,7 @@ const CheckoutSideMenu = () => {
             return (
                 <>
                     <Link to='/my-orders/last' className=''>
-                        <button className='w-full px-10 py-4 text-white border bg-neutral-900 hover:opacity-80 transition duration-150 hover:ease-linear text-lg font-medium disabled:opacity-70' onClick={() => handleCheckout()} disabled={context.cartProducts.length === 0}>Checkout</button>
+                        <button className='w-full px-10 py-4 text-white border bg-neutral-900 hover:opacity-80 transition duration-150 hover:ease-linear text-lg font-medium disabled:opacity-70' onClick={() => handleCheckout()} disabled={context.cartProducts.length === 0}>Finalizar Compra</button>
                     </Link>
                 </>
             );
@@ -53,7 +53,7 @@ const CheckoutSideMenu = () => {
             return (
                 <>
                     <Link to='/sign-in' className=''>
-                        <button className='w-full px-10 py-4 text-white border bg-neutral-900 hover:opacity-80 transition duration-150 hover:ease-linear text-lg font-medium'>Sign Up</button>
+                        <button className='w-full px-10 py-4 text-white border bg-neutral-900 hover:opacity-80 transition duration-150 hover:ease-linear text-lg font-medium'>Registrarse</button>
                     </Link>
                 </>
             );
@@ -63,7 +63,7 @@ const CheckoutSideMenu = () => {
     return (
         <aside className="max-md:min-w-[280px] md:w-[600px] flex flex-col self-center gap-3">
             <div className='flex justify-between items-center p-6'>
-                <h2 className='font-medium text-xl'>Cart</h2>
+                <h2 className='font-medium text-xl'>Carrito</h2>
             </div> 
             <div className=' px-6'>
                 {
@@ -88,7 +88,7 @@ const CheckoutSideMenu = () => {
             <div className='px-4 gap-3 flex flex-col'>
                 {renderButton()}
                 <Link to='/' className=''>
-                    <button className='w-full px-10 py-4 bg-white border hover:bg-neutral-900 hover:text-white transition duration-150 hover:ease-linear text-lg font-medium'>Back</button>
+                    <button className='w-full px-10 py-4 bg-white border hover:bg-neutral-900 hover:text-white transition duration-150 hover:ease-linear text-lg font-medium'>Volver</button>
                 </Link>
             </div>
         </aside>

@@ -37,7 +37,7 @@ function FormSignIn() {
                 <>
                     <Link to="/">
                         <button className='inline-block rounded-sm px-5 py-3 text-white bg-neutral-900 hover:opacity-80 transition duration-150 hover:ease-linear font-medium' onClick={() => handleSignOut()}>
-                            Log out
+                            Cerrar Sesión
                         </button>
                     </Link>
                 </>
@@ -47,7 +47,7 @@ function FormSignIn() {
                 <>
                     <Link to="/">
                         <button className='inline-block rounded-sm px-5 py-3 text-white bg-neutral-900 hover:opacity-80 transition duration-150 hover:ease-linear font-medium' onClick={() => handleSignIn()} disabled={!hasUserAnAccount}>
-                            Log in
+                            Iniciar Sesión
                         </button>
                     </Link>
                 </>
@@ -58,9 +58,9 @@ function FormSignIn() {
     return (
         <div className="mx-auto max-w-screen-xl px-4 pb-16 sm:px-6 lg:px-8">
             <div className="mx-auto max-w-lg text-center">
-                <h1 className="text-2xl font-bold sm:text-3xl">Get started today!</h1>
+                <h1 className="text-2xl font-bold sm:text-3xl">¡Comienza hoy!</h1>
                 <p className="mt-4 text-gray-500">
-                    Welcome to tienda virtual! Sign in for an express checkout experience. Your favorite items are just a click away.
+                    ¡Bienvenido a tienda virtual! Inicia sesión para una experiencia de compra rápida. Tus artículos favoritos están a solo un clic de distancia.
                 </p>
             </div>
 
@@ -78,9 +78,9 @@ function FormSignIn() {
 
                 <div className="flex items-center justify-between">
                     <p className="text-gray-500">
-                        No account?
+                        ¿No tienes cuenta?
                         <a className='ml-1 underline font-medium text-base' onClick={() => context.setViewForm('create-user-info')} disabled={hasUserAnAccount}>
-                            Sign up
+                            Regístrate
                         </a>
                     </p>
                     {renderButton()}
