@@ -26,14 +26,14 @@ const CheckoutSideMenu = () => {
     }, [context.isCheckoutSideMenuOpen]);
 
     return (
-        <aside className={`${context.isCheckoutSideMenuOpen ? 'flex' : 'hidden'} max-sm:w-full max-sm:h-screen max-sm:border-none w-[400px] h-[calc(100vh-68px)] top-[68px] flex-col fixed right-0 border border-black rounded-lg bg-white overflow-y-scroll`}>
-            <div className='flex justify-between items-center p-6'>
-                <h2 className='font-medium text-xl'>Mi Orden</h2>
-                <div onClick={() => context.closeCheckoutSideMenu()} className='bg-gray-400 bg-opacity-30 hover:bg-opacity-20 p-2 rounded-full cursor-pointer'>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5">
+        <aside className={`${context.isCheckoutSideMenuOpen ? 'flex' : 'hidden'} max-sm:w-full max-sm:h-screen max-sm:border-none w-[420px] h-[calc(100vh-68px)] top-[68px] flex-col fixed right-0 bg-white shadow-2xl overflow-y-scroll z-20 rounded-l-2xl`}>
+            <div className='flex justify-between items-center p-6 border-b border-gray-100 sticky top-0 bg-white z-10'>
+                <h2 className='font-bold text-2xl bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent'>Mi Orden</h2>
+                <button onClick={() => context.closeCheckoutSideMenu()} className='bg-gradient-to-r from-gray-100 to-gray-200 hover:from-gray-200 hover:to-gray-300 p-2 rounded-full cursor-pointer transition-all duration-300 hover:scale-110'>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5 text-gray-700">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
                     </svg>
-                </div>
+                </button>
             </div> 
 
             <div className='px-6 flex-1'>
@@ -49,13 +49,17 @@ const CheckoutSideMenu = () => {
                     ))
                 }
             </div>
-            <div className='px-6 min-h-screen mb-6'>
-                <p className='flex justify-between items-center mb-2'>
-                    <span className='font-normal'>Total:</span>
-                    <span className='font-medium text-2xl'>${totalPrice(context.cartProducts)}</span>
-                </p>
+            <div className='px-6 py-6 bg-gradient-to-b from-white to-purple-50 sticky bottom-0'>
+                <div className='bg-white rounded-2xl p-4 shadow-lg mb-4'>
+                    <p className='flex justify-between items-center'>
+                        <span className='font-semibold text-gray-700'>Total:</span>
+                        <span className='font-bold text-3xl bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent'>${totalPrice(context.cartProducts)}</span>
+                    </p>
+                </div>
                 <Link to='/cart'>
-                    <button className='bg-neutral-900 py-3 text-white w-full max-sm:h-14 hover:opacity-80 transition duration-150 hover:ease-linear' onClick={() => context.closeCheckoutSideMenu()}>Ver mi carrito</button>
+                    <button className='bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 py-4 text-white w-full rounded-xl font-bold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105' onClick={() => context.closeCheckoutSideMenu()}>
+                        Ver mi carrito
+                    </button>
                 </Link>
             </div>
         </aside>

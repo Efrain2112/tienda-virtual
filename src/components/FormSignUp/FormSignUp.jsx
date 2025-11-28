@@ -88,7 +88,7 @@ function FormSignUp() {
                         <a className="ml-1 underline font-medium text-base" href="#">Regístrate</a>
                     </p>
                     <Link to="/">
-                        <button type="submit" className="inline-block rounded-sm px-5 py-3 text-white bg-neutral-900 hover:opacity-80 transition duration-150 hover:ease-linear font-medium" onClick={() => createAnAccount()}>
+                        <button type="submit" className="inline-block rounded-xl px-6 py-3 text-white bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 transition-all duration-300 font-bold shadow-lg hover:shadow-xl transform hover:scale-105" onClick={() => createAnAccount()}>
                             Registrarse
                         </button>
                     </Link>

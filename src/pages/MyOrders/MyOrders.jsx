@@ -7,9 +7,9 @@ function MyOrders() {
   const context = useContext(ShoppingContext);
 
   return (
-    <section className='flex flex-col items-center justify-center gap-3 relative w-80'>
-      <h1>Mis Órdenes</h1>
-      <div className='min-h-[330px]'>
+    <section className='flex flex-col items-center justify-center gap-6 relative w-full max-w-2xl px-4'>
+      <h1 className='font-bold text-4xl bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent'>📦 Mis Órdenes</h1>
+      <div className='min-h-[330px] w-full'>
       {
           context.order.length > 0 ? (
             context.order.map((order, index) => (

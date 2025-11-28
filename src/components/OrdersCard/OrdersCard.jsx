@@ -5,7 +5,7 @@ const OrdersCard = props => {
 
   return (
     
-    <div className="md:w-72 flex justify-between items-center mb-3 border rounded-lg p-3 hover:bg-gray-400 hover:bg-opacity-10">
+    <div className="w-full flex justify-between items-center mb-4 border-2 border-purple-100 rounded-2xl p-4 hover:border-purple-300 hover:shadow-lg transition-all duration-300 bg-white hover:bg-gradient-to-r hover:from-purple-50 hover:to-pink-50">
       <div className="flex items-center justify-between grow gap-2 px-4">
           <div className="flex md:flex-col gap-1 items-center justify-center">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">

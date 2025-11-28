@@ -36,7 +36,7 @@ function FormSignIn() {
             return (
                 <>
                     <Link to="/">
-                        <button className='inline-block rounded-sm px-5 py-3 text-white bg-neutral-900 hover:opacity-80 transition duration-150 hover:ease-linear font-medium' onClick={() => handleSignOut()}>
+                        <button className='inline-block rounded-xl px-6 py-3 text-white bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 transition-all duration-300 font-bold shadow-lg hover:shadow-xl transform hover:scale-105' onClick={() => handleSignOut()}>
                             Cerrar Sesión
                         </button>
                     </Link>
@@ -46,7 +46,7 @@ function FormSignIn() {
             return(
                 <>
                     <Link to="/">
-                        <button className='inline-block rounded-sm px-5 py-3 text-white bg-neutral-900 hover:opacity-80 transition duration-150 hover:ease-linear font-medium' onClick={() => handleSignIn()} disabled={!hasUserAnAccount}>
+                        <button className='inline-block rounded-xl px-6 py-3 text-white bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 transition-all duration-300 font-bold shadow-lg hover:shadow-xl transform hover:scale-105' onClick={() => handleSignIn()} disabled={!hasUserAnAccount}>
                             Iniciar Sesión
                         </button>
                     </Link>

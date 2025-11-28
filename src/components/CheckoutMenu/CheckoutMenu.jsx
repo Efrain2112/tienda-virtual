@@ -45,7 +45,7 @@ const CheckoutSideMenu = () => {
             return (
                 <>
                     <Link to='/my-orders/last' className=''>
-                        <button className='w-full px-10 py-4 text-white border bg-neutral-900 hover:opacity-80 transition duration-150 hover:ease-linear text-lg font-medium disabled:opacity-70' onClick={() => handleCheckout()} disabled={context.cartProducts.length === 0}>Finalizar Compra</button>
+                        <button className='w-full px-10 py-4 text-white bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 transition-all duration-300 text-lg font-bold rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none' onClick={() => handleCheckout()} disabled={context.cartProducts.length === 0}>Finalizar Compra</button>
                     </Link>
                 </>
             );
@@ -53,7 +53,7 @@ const CheckoutSideMenu = () => {
             return (
                 <>
                     <Link to='/sign-in' className=''>
-                        <button className='w-full px-10 py-4 text-white border bg-neutral-900 hover:opacity-80 transition duration-150 hover:ease-linear text-lg font-medium'>Registrarse</button>
+                        <button className='w-full px-10 py-4 text-white bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 transition-all duration-300 text-lg font-bold rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105'>Registrarse</button>
                     </Link>
                 </>
             );
@@ -62,8 +62,8 @@ const CheckoutSideMenu = () => {
 
     return (
         <aside className="max-md:min-w-[280px] md:w-[600px] flex flex-col self-center gap-3">
-            <div className='flex justify-between items-center p-6'>
-                <h2 className='font-medium text-xl'>Carrito</h2>
+            <div className='flex justify-between items-center p-6 mb-4'>
+                <h2 className='font-bold text-3xl bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent'>🛒 Mi Carrito</h2>
             </div> 
             <div className=' px-6'>
                 {
@@ -88,7 +88,7 @@ const CheckoutSideMenu = () => {
             <div className='px-4 gap-3 flex flex-col'>
                 {renderButton()}
                 <Link to='/' className=''>
-                    <button className='w-full px-10 py-4 bg-white border hover:bg-neutral-900 hover:text-white transition duration-150 hover:ease-linear text-lg font-medium'>Volver</button>
+                    <button className='w-full px-10 py-4 bg-white border-2 border-purple-600 text-purple-600 hover:bg-purple-600 hover:text-white transition-all duration-300 text-lg font-bold rounded-xl shadow-md hover:shadow-lg'>Volver</button>
                 </Link>
             </div>
         </aside>
