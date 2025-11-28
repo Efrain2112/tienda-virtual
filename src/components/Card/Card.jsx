@@ -19,6 +19,14 @@ const Card = (data) => {
     console.log('CART: ', context.cartProducts);
   };
 
+  const addToWishlist = (event, productData) => {
+    event.stopPropagation();
+    const isInWishlist = context.wishlist.some(item => item.id === productData.id);
+    if (!isInWishlist) {
+      context.setWishlist([...context.wishlist, productData]);
+    }
+  };
+
   const renderIcon = (id) => {
     const isInCart = (context.cartProducts.filter(product => product.id === id).length > 0);
 
@@ -41,13 +49,33 @@ const Card = (data) => {
     }
   };
 
+  const renderWishlistIcon = () => {
+    const isInWishlist = context.wishlist.some(item => item.id === data.data.id);
+    
+    return (
+      <button
+        onClick={(event) => addToWishlist(event, data.data)}
+        className={`absolute top-3 left-3 p-2 rounded-full shadow-lg transition-all duration-300 hover:scale-110 z-10 ${
+          isInWishlist 
+            ? 'bg-red-500 text-white' 
+            : 'bg-white text-gray-400 hover:text-red-500'
+        }`}
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" fill={isInWishlist ? "currentColor" : "none"} viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+        </svg>
+      </button>
+    );
+  };
+
   return (
     <div className='group cursor-pointer bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1' onClick={() => showProduct(data.data)}>
       <figure className='relative w-full overflow-hidden'>
-        <span className='absolute top-3 left-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-xs font-semibold px-3 py-1.5 rounded-full z-10 shadow-lg'>
+        <span className='absolute bottom-3 left-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-xs font-semibold px-3 py-1.5 rounded-full z-10 shadow-lg'>
           {data.data.category.name}
         </span>
         <img className='h-[280px] w-full object-cover sm:h-[320px] group-hover:scale-110 transition-transform duration-500' src={data.data.images[0]} alt={data.data.title} />
+        {renderWishlistIcon()}
         {renderIcon(data.data.id)}
       </figure>
       <div className="p-4 bg-gradient-to-b from-white to-gray-50">

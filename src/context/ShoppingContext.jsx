@@ -49,6 +49,19 @@ const ShoppingProvider = ({children}) => {
     // Get products by category
     const [searchByCategory, setSearchByCategory] = useState(null);
 
+    // Wishlist
+    const [wishlist, setWishlist] = useState([]);
+    const [isWishlistOpen, setIsWishlistOpen] = useState(false);
+    const openWishlist = () => setIsWishlistOpen(true);
+    const closeWishlist = () => setIsWishlistOpen(false);
+
+    // Filters
+    const [isFiltersOpen, setIsFiltersOpen] = useState(false);
+    const openFilters = () => setIsFiltersOpen(true);
+    const closeFilters = () => setIsFiltersOpen(false);
+    const [priceRange, setPriceRange] = useState({ min: 0, max: Infinity });
+    const [sortBy, setSortBy] = useState('newest');
+
     useEffect(() => {
         const fetchData = async () => {
           try {
@@ -133,6 +146,18 @@ const ShoppingProvider = ({children}) => {
             setSignOut,
             viewForm,
             setViewForm,
+            wishlist,
+            setWishlist,
+            isWishlistOpen,
+            openWishlist,
+            closeWishlist,
+            isFiltersOpen,
+            openFilters,
+            closeFilters,
+            priceRange,
+            setPriceRange,
+            sortBy,
+            setSortBy,
         }}>
             {children}
         </ShoppingContext.Provider>  
